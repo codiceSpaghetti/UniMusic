@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane AnchorPane.leftAnchor="161.0" AnchorPane.topAnchor="2.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unipi.dii.inginf.lsmdb.unimusic.frontend.gui.searchBarController">
+   <children>
+      <AnchorPane AnchorPane.leftAnchor="0.0">
+         <children>
+            <HBox>
+               <children>
+                   <Button fx:id="searchButton" maxWidth="47.0" prefHeight="32.0" prefWidth="47.0" style="-fx-background-color: white; -fx-background-radius: 0; -fx-border-width: 0;">
+                       <graphic>
+                           <HBox alignment="CENTER" mouseTransparent="true">
+                              <children>
+                                  <ImageView>
+                                     <image>
+                                         <Image url="@../img/search.png" />
+                                     </image>
+                                  </ImageView>
+                              </children>
+                           </HBox>
+                       </graphic>
+                   </Button>
+                   <TextField fx:id="searchInput" prefHeight="37.0" prefWidth="253.0" style="-fx-background-radius: 0; -fx-border-width: 0;" styleClass="inputTextField" AnchorPane.leftAnchor="47.0" AnchorPane.topAnchor="0.0">
+                       <font>
+                           <Font size="16.0" />
+                       </font>
+                   </TextField>
+                  <HBox spacing="30.0">
+                     <children>
+                        <Label text="Filter Song by:" />
+                        <CheckBox fx:id="titleCheck" mnemonicParsing="false" text="Title" textFill="WHITE" />
+                        <CheckBox fx:id="artistCheck" mnemonicParsing="false" text="Artist" textFill="WHITE" />
+                        <CheckBox fx:id="albumCheck" mnemonicParsing="false" text="Album" textFill="WHITE" />
+                        <Label text="Filter User by:" />
+                        <CheckBox fx:id="userCheck" mnemonicParsing="false" text="Username" textFill="WHITE" />
+                     </children>
+                     <padding>
+                        <Insets left="50.0" top="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="anchorSearch" layoutY="37.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="0.0" prefHeight="0.0" prefWidth="0.0" visible="false" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="37.0">
+         <children>
+            <ScrollPane fx:id="searchScroll" hbarPolicy="NEVER" prefHeight="503.0" prefWidth="543.0" vbarPolicy="NEVER">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <VBox fx:id="resultBox" prefHeight="500.0" prefWidth="500.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+            <Button fx:id="closeSearchButton" layoutX="192.0" layoutY="503.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="159.0" text="CLOSE" AnchorPane.leftAnchor="192.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
