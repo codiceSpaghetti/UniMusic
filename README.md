@@ -1,4 +1,6 @@
 # UniMusic 
+
+## Introduction
 <b>UniMusic</b> is an application that aims to simplify and enhance the **song discovery and management experience** for its users. The main feature of the platform is the song search and management service, where users can find and access official sources of songs on the internet, such as YouTube and Spotify, through links provided by the application.
 
 Users can search and browse the songs in the platform's database by applying specific filters, such as genre, artist, and song name. The application also provides general information about each song, such as its name, genre, and artist, making it easy for users to find the songs they are looking for.
